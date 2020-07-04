@@ -1,4 +1,4 @@
-# SOURCE : https://nodejs.org/fr/docs/guides/nodejs-docker-webapp/
+# PARTIAL SOURCE : https://nodejs.org/fr/docs/guides/nodejs-docker-webapp/
 
 FROM node:12
 
@@ -21,8 +21,18 @@ COPY . .
 
 EXPOSE 3000
 
-CMD [ "node", "app.js" ]
+CMD [ "node", "src/app.js" ]
 
 # Don't forget : .dockerignore file with "node_modules" + "npm-debug.log"
 # Prevent your local modules and debug logs from being copied onto your Docker image
 
+# DOCKER IDE PLUGINS PRIVILEGE ISSUES -> https://docs.docker.com/engine/install/linux-postinstall/
+# sudo groupadd docker
+# sudo usermod -aG docker $USER
+# reboot to apply changes
+
+# Stop and delete all containers = 
+# docker stop $(docker ps -aq) ; docker rm $(docker ps -aq)
+
+# Stop + delete all containers & all images =
+# docker stop $(docker ps -aq) ; docker rm $(docker ps -aq) ; docker rmi $(docker images -q)
