@@ -4,14 +4,14 @@
 
 ## Project setup with docker
 
-### Build image
+### Set script file executable
 ```
-docker build -t template-nodejs-express -f docker/Dockerfile .
+chmod +x docker/deploy.sh
 ```
 
-### Launch container in detached mode
+### Run deployment script
 ```
-docker run -p 3050:3000 -d template-nodejs-express
+./docker/deploy.sh
 ```
 
 
