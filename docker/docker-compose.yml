@@ -9,6 +9,3 @@ services:
         restart: unless-stopped
         ports:
         - "3050:3000"
-        volumes:
-        - /../:/usr/app
-        - /../node_modules:/usr/app/node_modules
