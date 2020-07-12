@@ -2,9 +2,8 @@ version: '3'
 
 services:
     template_nodejs_express:
-        build:
-            context: ..
-            dockerfile: docker/Dockerfile
+        # entrypoint: ["sh", "-c", "sleep 2073600"] # For debug.
+        image: template-nodejs-express
         container_name: template_nodejs_express
         restart: unless-stopped
         ports:
