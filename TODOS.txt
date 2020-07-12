@@ -1,5 +1,1 @@
 // TODO Use ES module import with babel ?
-
-// Hot reload ?
-
-// Fix package version ?
