@@ -7,4 +7,7 @@ services:
         container_name: template_nodejs_express
         restart: unless-stopped
         ports:
-        - "3050:3000"
+            - "3050:3000"
+        volumes: 
+            - ../:/usr/app
+            - /usr/app/node_modules # Prevent host to override container's node_modules.

@@ -21,7 +21,7 @@ COPY . .
 
 EXPOSE 3000
 
-CMD [ "node", "src/app.js" ]
+CMD [ "npm", "run", "dev" ]
 
 # Don't forget : .dockerignore file with "node_modules" + "npm-debug.log"
 # Prevent your local modules and debug logs from being copied onto your Docker image
