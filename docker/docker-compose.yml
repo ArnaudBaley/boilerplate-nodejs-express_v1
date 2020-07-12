@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    template_nodejs_express:
+        # entrypoint: ["sh", "-c", "sleep 2073600"] # For debug.
+        image: template-nodejs-express
+        container_name: template_nodejs_express
+        restart: unless-stopped
+        ports:
+            - "3050:3000"
+        volumes: 
+            - ../:/usr/app
+            - /usr/app/node_modules # Prevent host to override container's node_modules.

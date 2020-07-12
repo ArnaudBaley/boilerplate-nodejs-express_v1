@@ -3,7 +3,7 @@
 FROM node:12
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /usr/app
 
 # Copy app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -21,7 +21,7 @@ COPY . .
 
 EXPOSE 3000
 
-CMD [ "node", "src/app.js" ]
+CMD [ "npm", "run", "dev" ]
 
 # Don't forget : .dockerignore file with "node_modules" + "npm-debug.log"
 # Prevent your local modules and debug logs from being copied onto your Docker image
