@@ -5,11 +5,11 @@
 # Use current folder to execute next commands.
 cd "$(dirname "$0")"
 
-# Build image.
-docker build -t template-nodejs-express -f ../docker/Dockerfile ../
-
 # Remove eventual existing container.
 docker stop template_nodejs_express ; docker rm template_nodejs_express
 
+# Build image (execution context is parent folder)
+docker build -t template-nodejs-express -f ../docker/Dockerfile ../
+
 # Run image.
-docker run -p 3050:3000 -d --name template_nodejs_express template-nodejs-express
+docker-compose up -d
