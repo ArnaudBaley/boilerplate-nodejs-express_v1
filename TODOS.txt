@@ -1,1 +1,13 @@
-// TODO Use ES module import with babel ?
+// TODO -> Make best practice arbo works
+
+// TODO -> Use ES module import with babel ?
+
+// TODO -> Logger
+
+// TODO -> TU
+
+// TODO -> Schema validation (API & services)
+
+// TODO -> Auth
+
+// TODO -> DB
