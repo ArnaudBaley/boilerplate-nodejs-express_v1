@@ -1,6 +1,6 @@
-// TODO -> Make best practice arbo works
+// TODO -> Debug
 
-// TODO -> Use ES module import with babel ?
+// TODO -> Make best practice arbo works
 
 // TODO -> Logger
 
