@@ -2,12 +2,14 @@
  * @summary Users Routes.
  */
 
-import { Router } from "express";
-import * as UserController from "./users.controller";
+const express = require("express");
+const userController = require("./users.controller");
 
-const routes = new Router();
+const router = express.Router();
 
 // anonymous
-routes.post("/", UserController.create);
+router.post("/", userController.create);
 
-export default routes;
+module.exports = {
+  router,
+};

@@ -4,10 +4,12 @@
 
 async function create(req, res) {
   try {
-    return res.status(201).json("OK");
+    return res.status(201).json({ result: "OK" });
   } catch (e) {
     return res.status(500);
   }
 }
 
-export default create;
+module.exports = {
+  create,
+};
