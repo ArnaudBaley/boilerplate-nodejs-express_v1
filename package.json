@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/ArnaudBaley/template-nodejs-express#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "bunyan": "^1.8.14",
+    "bunyan-format": "^0.2.1",
+    "express": "^4.17.1",
+    "express-bunyan-logger": "^1.3.3"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
