@@ -22,7 +22,7 @@
     "bunyan": "^1.8.14",
     "bunyan-format": "^0.2.1",
     "express": "^4.17.1",
-    "express-bunyan-logger": "^1.3.3"
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
