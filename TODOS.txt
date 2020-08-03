@@ -1,7 +1,0 @@
-// TODO -> TU
-
-// TODO -> Schema validation (API & services)
-
-// TODO -> Auth
-
-// TODO -> DB
