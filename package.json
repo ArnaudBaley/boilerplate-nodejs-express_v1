@@ -22,6 +22,7 @@
     "bunyan": "^1.8.14",
     "bunyan-format": "^0.2.1",
     "express": "^4.17.1",
+    "mongoose": "^5.9.27",
     "morgan": "^1.10.0"
   },
   "devDependencies": {

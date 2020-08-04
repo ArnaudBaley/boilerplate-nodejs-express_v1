@@ -6,6 +6,7 @@ const {
 } = require("./config/config.logger");
 // Import all routes from config.
 const routes = require("./config/config.routes");
+const { dbConnect } = require("./config/config.bd");
 
 const app = express();
 
@@ -13,6 +14,10 @@ const app = express();
 app.use(morganStdoutLogger);
 app.use(morganFileLogger);
 
+// Connect to MongoDB.
+dbConnect();
+
+// Routes.
 app.get("/", function (req, res) {
   res.send("Hello World!");
 });
