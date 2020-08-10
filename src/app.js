@@ -1,4 +1,5 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const { log } = require("./config/config.logger");
 const {
   morganStdoutLogger,
@@ -16,6 +17,11 @@ app.use(morganFileLogger);
 
 // Connect to MongoDB.
 dbConnect();
+
+// parse requests application/json -> req.body
+app.use(bodyParser.json());
+// parse requests application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes.
 app.get("/", function (req, res) {
