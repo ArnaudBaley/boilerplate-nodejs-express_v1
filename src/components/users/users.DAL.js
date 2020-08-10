@@ -2,12 +2,12 @@
  * @summary Users Data Access Layer (DAL).
  */
 const { log } = require("../../config/config.logger");
-const { userModel } = require("./users.model");
 
 const createUser = (user) => {
-  userModel
+  user
     .save(user)
     .then((data) => {
+      log.debug(`création user "${user.username}" OK.`);
       return data;
     })
     .catch((err) => {

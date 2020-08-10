@@ -1,6 +1,6 @@
 Todos:
 
-☐ DB
+☐ DB (migrate from mongoose to Mongo DB Driver)
 
 ☐ Schema validation (API & services)
 

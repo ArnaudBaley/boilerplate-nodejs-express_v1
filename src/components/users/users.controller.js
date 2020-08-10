@@ -7,7 +7,7 @@ const { userModel } = require("./users.model");
 
 async function create(req, res) {
   try {
-    const user = new userModel(req.body);
+    const user = userModel(req.body);
     createUser(user);
     return res.status(201).json({ result: "OK" });
   } catch (err) {
