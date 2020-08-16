@@ -1,23 +1,30 @@
-const mongoose = require("mongoose");
+const { MongoClient } = require("mongodb");
 const { log } = require("./config.logger");
 
-const mongoUrl = "mongodb://mongo:27017/template-nodejs-express";
+const mongoUrl = "mongodb://mongo:27017/";
+const dbName = "template-nodejs-express";
 
-const dbConnect = () => {
-  mongoose
-    .connect(mongoUrl, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+let db;
+
+const connectToDB = async () => {
+  MongoClient.connect(mongoUrl)
+    .then(function (dbClient) {
+      // <- db as first argument
+      log.info("Connected to the database.");
+      db = dbClient.db(dbName);
+      return db;
     })
-    .then(() => {
-      log.info("Connected to the database!");
-    })
-    .catch((err) => {
-      log.error("Cannot connect to the database!", err);
-      process.exit();
+    .catch(function (error) {
+      log.error(`Database connection error : ${error}`);
+      throw error;
     });
 };
 
+const getDBClient = () => {
+  return db;
+};
+
 module.exports = {
-  dbConnect,
+  connectToDB,
+  getDBClient,
 };

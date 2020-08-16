@@ -1,13 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { log } = require("./config/config.logger");
+const { connectToDB } = require("./config/config.bd");
 const {
   morganStdoutLogger,
   morganFileLogger,
 } = require("./config/config.logger");
 // Import all routes from config.
 const routes = require("./config/config.routes");
-const { dbConnect } = require("./config/config.bd");
 
 const app = express();
 
@@ -15,8 +15,8 @@ const app = express();
 app.use(morganStdoutLogger);
 app.use(morganFileLogger);
 
-// Connect to MongoDB.
-dbConnect();
+// MongoDB connection.
+connectToDB();
 
 // parse requests application/json -> req.body
 app.use(bodyParser.json());
