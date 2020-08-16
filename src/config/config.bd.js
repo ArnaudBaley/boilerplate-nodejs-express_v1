@@ -9,7 +9,6 @@ let db;
 const connectToDB = async () => {
   MongoClient.connect(mongoUrl)
     .then(function (dbClient) {
-      // <- db as first argument
       log.info("Connected to the database.");
       db = dbClient.db(dbName);
       return db;
