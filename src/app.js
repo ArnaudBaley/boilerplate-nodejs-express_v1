@@ -1,15 +1,20 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const swaggerUi = require("swagger-ui-express");
 const { log } = require("./config/config.logger");
 const { connectToDB } = require("./config/config.bd");
 const {
   morganStdoutLogger,
   morganFileLogger,
 } = require("./config/config.logger");
+const swaggerDocument = require("./swagger.json");
 // Import all routes from config.
 const routes = require("./config/config.routes");
 
 const app = express();
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+log.info("OpenAPI UI : http://localhost:3000/api-docs");
 
 // stout logger for HTTP request.
 app.use(morganStdoutLogger);
