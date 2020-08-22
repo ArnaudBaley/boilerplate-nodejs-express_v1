@@ -23,9 +23,11 @@
     "bunyan": "^1.8.14",
     "bunyan-format": "^0.2.1",
     "express": "^4.17.1",
+    "express-openapi-validator": "^3.16.10",
     "mongodb": "^3.6.0",
     "morgan": "^1.10.0",
-    "swagger-ui-express": "^4.1.4"
+    "swagger-ui-express": "^4.1.4",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
