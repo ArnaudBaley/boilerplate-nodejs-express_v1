@@ -1,12 +1,10 @@
 Todos:
 
-☐ API documentation
-
 ☐ Schema validation (jsonschema + ajv)
 
-☐ API validation (openAPI validator)
-
 ☐ TU
+
+☐ TI
 
 ☐ Auth
 
