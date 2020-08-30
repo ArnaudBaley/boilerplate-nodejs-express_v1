@@ -20,17 +20,33 @@ paths:
         required: true
         content:
           application/json:
-            schema:
-              $ref: '#/components/schemas/User'
+            schema:              
+              type: object
+              required:
+                - userName
+              properties:
+                userName:
+                  type: string
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                age:
+                  type: integer
+            examples:
+              CreateUserJohnDoe:
+                value:
+                  userName: jdoe
+                  firstName: john
+                  lastName: doe
+                  age: 30
       responses:
-        '200':
+        '201':
           description: pet response
-
-components:
-  schemas:
-    User:
-      required:
-        - userName
-      properties:
-        userName:
-          type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: boolean
