@@ -19,7 +19,7 @@ const createUser = async (userData) => {
     const userCollection = db.collection("users");
 
     await userCollection.insert({
-      username: userData.userName,
+      ...userData,
       createdAt: new Date(),
     });
 
