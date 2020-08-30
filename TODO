@@ -1,7 +1,5 @@
 Todos:
 
-☐ Schema validation (jsonschema + ajv)
-
 ☐ TU
 
 ☐ TI
@@ -11,3 +9,7 @@ Todos:
 ☐ Exceptions
 
 ☐ TypeScript ?
+
+Done:
+
+✔ Schema validation (ajv) @done(20-08-30 17:09)
