@@ -6,8 +6,8 @@ const { createUser } = require("./users.DAL");
 
 async function create(req, res) {
   try {
-    createUser(req.body);
-    return res.status(201).json({ result: "OK" });
+    await createUser(req.body);
+    return res.status(201).json({ success: true });
   } catch (err) {
     log.error(err);
     return res.status(500);
