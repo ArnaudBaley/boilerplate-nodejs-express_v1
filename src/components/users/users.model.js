@@ -1,3 +1,0 @@
-/**
- * @summary Users Model.
- */

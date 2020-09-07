@@ -1,0 +1,3 @@
+/**
+ * @summary Users external API.
+ */

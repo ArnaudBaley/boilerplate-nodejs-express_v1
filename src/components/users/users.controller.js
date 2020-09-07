@@ -2,11 +2,12 @@
  * @summary Users Controller.
  */
 const { log } = require("../../config/config.logger");
-const { createUser } = require("./users.DAL");
+const { createUserService } = require("./users.service");
 
 async function create(req, res) {
   try {
-    await createUser(req.body);
+    const createUserResult = await createUserService(req.body);
+    log.debug(`création user "${createUserResult.userName}" OK.`);
     return res.status(201).json({ success: true });
   } catch (err) {
     log.error(err);
