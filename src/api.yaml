@@ -12,9 +12,11 @@ servers:
 paths:
   /users:
     post:
-      description: Creates a new user.
+      summary: Create user.
+      description: Creates a new user.  
       operationId: createUser
-      security: []        
+      tags: ["users"]
+      security: []
       requestBody:
         description: User to create.
         required: true
@@ -40,6 +42,23 @@ paths:
                   firstName: john
                   lastName: doe
                   age: 30
+      responses:
+        '201':
+          description: pet response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: boolean
+  /users/random:
+    post:
+      summary: Create random user.
+      description: Creates a random new user.
+      operationId: createRandomUser
+      tags: ["users"]  
+      security: []
       responses:
         '201':
           description: pet response
