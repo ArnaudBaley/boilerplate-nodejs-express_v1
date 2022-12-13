@@ -24,7 +24,7 @@
     "body-parser": "^1.19.0",
     "bunyan": "^1.8.14",
     "bunyan-format": "^0.2.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-openapi-validator": "^3.16.10",
     "mongodb": "^3.6.0",
     "morgan": "^1.10.0",
